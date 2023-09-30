@@ -21,23 +21,30 @@
 #include "led.h"
 #include "uart.h"
 #include "oskernel.h"
+#include "gpio_driver.h"
 
-#define QUANTA           10
+#define QUANTA           1
 
 typedef uint32_t TaskProfiler;
 TaskProfiler Task0_Profiler;
 TaskProfiler Task1_Profiler;
 TaskProfiler Task2_Profiler;
+TaskProfiler Task3_Profiler;
+TaskProfiler Idle_Profiler;
 
-void motor_run();
-void motor_stop();
-void valve_open();
-void valve_close();
 
 /*user defined threads*/
+void idle(void){
+	while(1){
+		 Idle_Profiler++;
+
+	}
+}
 void task0(void){
 	while(1){
 		Task0_Profiler++;
+		GPIO_TogglePin(GPIOD, GPIO_PIN_12);
+		thread_delay(1000);
 
 	}
 }
@@ -45,6 +52,8 @@ void task0(void){
 void task1(void){
 	while(1){
 		Task1_Profiler++;
+		GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+		thread_delay(500);
 
 	}
 }
@@ -52,16 +61,31 @@ void task1(void){
 void task2(void){
 	while(1){
 		Task2_Profiler++;
+		GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+		thread_delay(250);
+
+	}
+}
+
+
+void task3(void){
+	while(1){
+		Task3_Profiler++;
+		GPIO_TogglePin(GPIOD, GPIO_PIN_15);
+		thread_delay(125);
 
 	}
 }
 void (*threads[NUM_OF_THREADS])(void); /*threads array*/
 
 int main(void){
-	threads[0] = task0;
-	threads[1] = task1;
-	threads[2] = task2;
+	threads[0] = idle;
+	threads[1] = task0;
+	threads[2] = task1;
+	threads[3] = task2;
+	threads[4] = task3;
 	/*Initialize the kernel*/
+	led_init();
 	osKernelInit();
 
 	/*add threads*/
@@ -69,19 +93,6 @@ int main(void){
 
 	/*set RR time quanta*/
 	osKernelLaunch(QUANTA);
-}
-void motor_run(void){
-	printf("motor is starting...\n\r");
-}
-void motor_stop(void){
-	printf("motor is stopping...\n\r");
-}
-
-void valve_open(void){
-	printf("valve is opening...\n\r");
-}
-void valve_close(void){
-	printf("valve is closing...\n\r");
 }
 
 

@@ -26,22 +26,25 @@ void led_init(){
 	led.GPIOx_Cofig.GPIO_PinSpeed = LowSpeed;                       //lowspeed mode
 	led.GPIOx_Cofig.GPIO_PullUpPullDown_Ctrl = NoPullUpOrPullDown;  //no pullup or pulldown
 
+
 	GPIO_Init(&led);
 
+
+	led.GPIOx_Cofig.GPIO_PinNumber = GPIO_PIN_13;                   //Green led
+	GPIO_Init(&led);
+
+
+
+	led.GPIOx_Cofig.GPIO_PinNumber = GPIO_PIN_14;                   //Green led
+	GPIO_Init(&led);
+
+
+	led.GPIOx_Cofig.GPIO_PinNumber = GPIO_PIN_15;                   //Green led
+	GPIO_Init(&led);
+
+
+
 }
 
 
-void led_on(){
-	/*Turn green led on*/
-	GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
-}
-
-void led_off(){
-	/*Turn green led off*/
-	GPIO_WritePin(GPIOD, GPIO_PIN_12,GPIO_PIN_RESET);
-}
-
-void led_toggle(){
-	GPIO_TogglePin(GPIOD, GPIO_PIN_12);
-}
 
