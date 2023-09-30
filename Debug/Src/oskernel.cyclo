@@ -1,0 +1,9 @@
+../Inc/core_cm4.h:1816:22:__NVIC_SetPriority	2
+../Src/oskernel.c:31:13:osKernelStackInit	2
+../Src/oskernel.c:43:9:osKernelAddThreads	3
+../Src/oskernel.c:66:6:osKernelInit	1
+../Src/oskernel.c:72:6:osKernelLaunch	1
+../Src/oskernel.c:91:6:SysTick_Handler	1
+../Src/oskernel.c:98:13:update_ticks	1
+../Src/oskernel.c:102:28:PendSV_Handler	1
+../Src/oskernel.c:130:36:osSchedulerLaunch	1

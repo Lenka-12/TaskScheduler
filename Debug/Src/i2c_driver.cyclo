@@ -1,0 +1,8 @@
+../Src/i2c_driver.c:17:13:I2C_Stop	1
+../Src/i2c_driver.c:23:6:I2C_ClockConfig	8
+../Src/i2c_driver.c:57:6:I2C_Init	3
+../Src/i2c_driver.c:100:6:I2C_Master_Transmit	3
+../Src/i2c_driver.c:121:6:I2C_Master_Recieve	7
+../Src/i2c_driver.c:172:6:I2C_Mem_Read	5
+../Src/i2c_driver.c:193:13:I2Cx_Start	2
+../Src/i2c_driver.c:203:13:I2C_SentAddress	2

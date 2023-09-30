@@ -1,0 +1,5 @@
+../Src/spi_driver.c:17:6:SPI_ClockConfig	12
+../Src/spi_driver.c:62:6:SPI_Init	6
+../Src/spi_driver.c:123:6:SPI_DeInit	6
+../Src/spi_driver.c:158:6:SPI_SendData	4
+../Src/spi_driver.c:180:6:SPI_RecieveData	4

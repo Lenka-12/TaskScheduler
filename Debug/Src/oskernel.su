@@ -1,0 +1,9 @@
+../Inc/core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+../Src/oskernel.c:31:13:osKernelStackInit	24	static
+../Src/oskernel.c:43:9:osKernelAddThreads	24	static,ignoring_inline_asm
+../Src/oskernel.c:66:6:osKernelInit	8	static
+../Src/oskernel.c:72:6:osKernelLaunch	16	static
+../Src/oskernel.c:91:6:SysTick_Handler	8	static
+../Src/oskernel.c:98:13:update_ticks	4	static
+../Src/oskernel.c:102:28:PendSV_Handler	0	static,ignoring_inline_asm
+../Src/oskernel.c:130:36:osSchedulerLaunch	0	static,ignoring_inline_asm

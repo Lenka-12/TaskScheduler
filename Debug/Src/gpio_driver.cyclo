@@ -1,0 +1,13 @@
+../Inc/core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+../Inc/core_cm4.h:1724:22:__NVIC_DisableIRQ	2
+../Inc/core_cm4.h:1816:22:__NVIC_SetPriority	2
+../Src/gpio_driver.c:10:6:GPIO_ClockConfig	14
+../Src/gpio_driver.c:59:6:GPIO_Init	12
+../Src/gpio_driver.c:129:6:GPIO_DeInit	8
+../Src/gpio_driver.c:174:9:GPIO_ReadPin	1
+../Src/gpio_driver.c:183:10:GPIO_ReadPort	1
+../Src/gpio_driver.c:187:6:GPIO_WritePin	2
+../Src/gpio_driver.c:198:6:GPIO_WritePort	1
+../Src/gpio_driver.c:203:6:GPIO_TogglePin	1
+../Src/gpio_driver.c:208:6:GPIO_IRQConfig	2
+../Src/gpio_driver.c:219:6:GPIO_ISRHandling	2
