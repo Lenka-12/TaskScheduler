@@ -24,8 +24,8 @@ The system tick timer generates periodic interrupts, which are used to keep trac
 
 
 ## Usage
-To use this RTOS scheduler, you need to include the necessary files in your project and configure the GPIO pins according to your hardware setup. Make sure to edit number of threads/tasks in oskernel.h , NUM_OF_THREADS, and the size of stack for each at by chnaging 
-STACKSIZE in  oskernel.h file.
+To use this RTOS scheduler, you need to include the necessary files in your project and configure the GPIO pins according to your hardware setup. Make sure to edit number of threads/tasks in oskernel.h , NUM_OF_THREADS, and the size of stack for each at by changing 
+STACKSIZE.
  
  Note that number of threads include idle thread, To make sure that idle task is not neglected it is recommended that idle task is not changed in main.c, and it should remain at 0th index of the threads array.
 
